@@ -1,29 +1,28 @@
+import java.util.ArrayList;
+import java.util.Map;
 import java.util.HashMap;
-
 import spark.ModelAndView;
 import spark.template.velocity.VelocityTemplateEngine;
-
 import static spark.Spark.*;
 
-public class template {
+public class VowelReplace {
   public static void main( String[] args ) {
     staticFileLocation("/public");
     String layout = "templates/layout.vtl";
-    // System.out.println( "Hello World!" );
 
     get("/", (request, response) -> {
         HashMap model = new HashMap();
         model.put("template", "templates/hello.vtl" );
 
-        return new ModelAndView(model, "templates/layout.vtl");
+        return new ModelAndView(model, layout);
       }, new VelocityTemplateEngine());
     };
 
-    get("/other", (request, response) -> {
+    get("/replaced", (request, response) -> {
         HashMap model = new HashMap();
-        model.put("template", "templates/other.vtl" );
+        model.put("template", "templates/replaced.vtl" );
 
-        return new ModelAndView(model, "templates/layout.vtl");
+        return new ModelAndView(model, layout);
       }, new VelocityTemplateEngine());
     };
   }

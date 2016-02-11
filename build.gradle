@@ -1,9 +1,9 @@
 apply plugin: 'java'
 apply plugin: 'application'
 
-archivesBaseName = "template"
+archivesBaseName = "VowelReplace"
 version = '1.0'
-mainClassName = "template"
+mainClassName = "VowelReplace"
 
 repositories {
 mavenCentral()
