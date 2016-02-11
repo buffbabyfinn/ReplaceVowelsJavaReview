@@ -16,7 +16,6 @@ public class VowelReplace {
 
         return new ModelAndView(model, layout);
       }, new VelocityTemplateEngine());
-    };
 
     get("/replaced", (request, response) -> {
         HashMap model = new HashMap();
@@ -24,6 +23,8 @@ public class VowelReplace {
 
         return new ModelAndView(model, layout);
       }, new VelocityTemplateEngine());
-    };
+    }
+  public Boolean isLeapYear(Integer year) {
+  // eventually put your code here
+  return false;
   }
-}

@@ -13,5 +13,12 @@ public class AppIntegrationTest extends FluentTest {
 
   @ClassRule
   public static ServerRule server = new ServerRule();
+  @Test
+    public void rootTest() {
+      goTo("http://localhost:4567");
+      fill("#year").with("2004");
+      submit(".btn");
+      assertThat(pageSource()).contains("2004 is a leap year!");
+    }
 
 }

@@ -5,6 +5,8 @@ public class AppTest {
 
   @Test
   public void method_input_result() {
-    // eventually put your testing code here
+    LeapYear leapYear = new LeapYear();
+     assertEquals(true, leapYear.isLeapYear(2012));
   }
+  
 }
