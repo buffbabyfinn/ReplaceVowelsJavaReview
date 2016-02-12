@@ -13,12 +13,14 @@ public class VowelReplaceIntegrationTest extends FluentTest {
 
   @ClassRule
   public static ServerRule server = new ServerRule();
+
   @Test
-    public void rootTest() {
+    public void checkVowelReplace() {
       goTo("http://localhost:4567");
       fill("#userString").with("The quick brown fox jumps over the lazy dog.");
       submit(".btn");
       assertThat(pageSource()).contains("Th- q--ck br-wn f-x j-mps -v-r th- l-zy d-g.");
     }
+
 
 }

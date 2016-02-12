@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Map;
 import java.util.HashMap;
 import spark.ModelAndView;
@@ -7,7 +7,7 @@ import static spark.Spark.*;
 
 public class VowelReplace {
   public static void main( String[] args ) {
-    staticFileLocation("/public");
+      staticFileLocation("/public");
     String layout = "templates/layout.vtl";
 
     get("/", (request, response) -> {
@@ -27,6 +27,7 @@ public class VowelReplace {
       model.put("replaced", replaced);
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
+
   }
 
   public static String replaceTheVowels(String userSentence) {
@@ -36,5 +37,5 @@ public class VowelReplace {
     return userSentenceReplacedVowels;
   }
 
-  
+
 }

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="VowelReplaceIntegrationTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2016-02-12T17:31:29" hostname="Dingus" time="1.255">
+<testsuite name="VowelReplaceIntegrationTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2016-02-12T23:29:33" hostname="Dingus" time="0.824">
   <properties/>
-  <testcase name="rootTest" classname="VowelReplaceIntegrationTest" time="1.255"/>
+  <testcase name="checkVowelReplace" classname="VowelReplaceIntegrationTest" time="0.824"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[[Thread-4] INFO spark.webserver.SparkServer - == Spark has ignited ...
 [Thread-4] INFO spark.webserver.SparkServer - >> Listening on 0.0.0.0:4567
