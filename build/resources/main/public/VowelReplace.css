@@ -1,3 +1,22 @@
-.whatevs {
-  
+.input-form {
+font-family: monospace;
+}
+.jumbotron h1 {
+  font-family: monospace;
+}
+.jumbotron {
+  background-color: #c17c97;
+}
+body {
+  text-align: center;
+  background-color: #a9cb82;
+  color: #1B4C31;
+}
+.btn {
+  font-weight: bold;
+  color: #1B4C31;
+  background-color: #ba6f5c;
+}
+.btn:hover {
+  background-color: #945849;
 }
