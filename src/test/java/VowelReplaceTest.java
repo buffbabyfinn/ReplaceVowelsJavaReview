@@ -1,12 +1,12 @@
 import org.junit.*;
 import static org.junit.Assert.*;
 
-public class AppTest {
+public class VowelReplaceTest {
 
   @Test
-  public void method_input_result() {
-    LeapYear leapYear = new LeapYear();
-     assertEquals(true, leapYear.isLeapYear(2012));
+  public void replaceTheVowel_stringInputByUser_vowelsReplacedWithDashes() {
+    VowelReplace vowelReplace = new VowelReplace();
+     assertEquals(true, vowelReplace.replaceTheVowels("vowels"));
   }
-  
+
 }

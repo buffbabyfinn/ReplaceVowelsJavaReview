@@ -7,24 +7,25 @@ import static spark.Spark.*;
 
 public class VowelReplace {
   public static void main( String[] args ) {
-    staticFileLocation("/public");
-    String layout = "templates/layout.vtl";
-
-    get("/", (request, response) -> {
-        HashMap model = new HashMap();
-        model.put("template", "templates/hello.vtl" );
-
-        return new ModelAndView(model, layout);
-      }, new VelocityTemplateEngine());
-
-    get("/replaced", (request, response) -> {
-        HashMap model = new HashMap();
-        model.put("template", "templates/replaced.vtl" );
-
-        return new ModelAndView(model, layout);
-      }, new VelocityTemplateEngine());
+    // staticFileLocation("/public");
+    // String layout = "templates/layout.vtl";
+    //
+    // get("/", (request, response) -> {
+    //     HashMap model = new HashMap();
+    //     model.put("template", "templates/hello.vtl" );
+    //
+    //     return new ModelAndView(model, layout);
+    //   }, new VelocityTemplateEngine());
+    //
+    // get("/replaced", (request, response) -> {
+    //     HashMap model = new HashMap();
+    //     model.put("template", "templates/replaced.vtl" );
+    //
+    //     return new ModelAndView(model, layout);
+    //   }, new VelocityTemplateEngine());
     }
-  public Boolean isLeapYear(Integer year) {
+  public Boolean replaceTheVowels(String userSentence) {
   // eventually put your code here
-  return false;
+  return true;
   }
+}
