@@ -22,14 +22,14 @@ public class VowelReplace {
       model.put("template", "templates/replaced.vtl" );
 
       String userSentence = request.queryParams("userSentence");
-      String replaced = vowelReplace(userSentence);
+      String replaced = replaceTheVowels(userSentence);
 
       model.put("replaced", replaced);
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
   }
 
-  public String replaceTheVowels(String userSentence) {
+  public static String replaceTheVowels(String userSentence) {
     String vowels = "[AEIOUaeiou]";
     String userSentenceReplacedVowels = userSentence.replaceAll(vowels, "-");
 
