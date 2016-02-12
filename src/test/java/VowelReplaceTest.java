@@ -6,7 +6,7 @@ public class VowelReplaceTest {
   @Test
   public void replaceTheVowel_stringInputByUser_vowelsReplacedWithDashes() {
     VowelReplace vowelReplace = new VowelReplace();
-     assertEquals(true, vowelReplace.replaceTheVowels("vowels"));
+     assertEquals("- m-n, - pl-n, - c-n-l: -lf-nz.", vowelReplace.replaceTheVowels("A man, a plan, a canal: Alfonz."));
   }
 
 }

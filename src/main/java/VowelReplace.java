@@ -24,8 +24,11 @@ public class VowelReplace {
     //     return new ModelAndView(model, layout);
     //   }, new VelocityTemplateEngine());
     }
-  public Boolean replaceTheVowels(String userSentence) {
-  // eventually put your code here
-  return true;
+  public String replaceTheVowels(String userSentence) {
+
+    String vowels = "[AEIOUaeiou]";
+    String userSentenceReplacedVowels = userSentence.replaceAll(vowels, "-");
+
+    return userSentenceReplacedVowels;
   }
 }
