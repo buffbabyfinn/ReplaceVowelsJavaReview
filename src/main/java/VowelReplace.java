@@ -7,25 +7,29 @@ import static spark.Spark.*;
 
 public class VowelReplace {
   public static void main( String[] args ) {
-    // staticFileLocation("/public");
-    // String layout = "templates/layout.vtl";
-    //
-    // get("/", (request, response) -> {
-    //     HashMap model = new HashMap();
-    //     model.put("template", "templates/hello.vtl" );
-    //
-    //     return new ModelAndView(model, layout);
-    //   }, new VelocityTemplateEngine());
-    //
-    // get("/replaced", (request, response) -> {
-    //     HashMap model = new HashMap();
-    //     model.put("template", "templates/replaced.vtl" );
-    //
-    //     return new ModelAndView(model, layout);
-    //   }, new VelocityTemplateEngine());
-    }
-  public String replaceTheVowels(String userSentence) {
+    staticFileLocation("/public");
+    String layout = "templates/layout.vtl";
 
+    get("/", (request, response) -> {
+      HashMap model = new HashMap();
+      model.put("template", "templates/home.vtl" );
+
+      return new ModelAndView(model, layout);
+    }, new VelocityTemplateEngine());
+
+    get("/replaced", (request, response) -> {
+      HashMap model = new HashMap();
+      model.put("template", "templates/replaced.vtl" );
+
+      String userSentence = request.queryParams("userSentence");
+      String replaced = vowelReplace(userSentence);
+
+      model.put("replaced", replaced);
+      return new ModelAndView(model, layout);
+    }, new VelocityTemplateEngine());
+  }
+
+  public String replaceTheVowels(String userSentence) {
     String vowels = "[AEIOUaeiou]";
     String userSentenceReplacedVowels = userSentence.replaceAll(vowels, "-");
 
